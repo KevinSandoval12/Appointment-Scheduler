@@ -10,7 +10,7 @@
   <body>
     <main>
       <h1>Appointment Scheduler</h1>
-      <form id="calendar-form" action="">
+      <form id="calendar-form" action="/submit-button" method="POST">
         <legend>Personal Information</legend>
         <fieldset>
           <label for="fname">First Name:</label>
@@ -29,7 +29,7 @@
           <span id="err-time" class="error">Please input a time.</span>
           <input type="time" id="time" />
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submit-button">Submit</button>
         </fieldset>
       </form>
     </main>

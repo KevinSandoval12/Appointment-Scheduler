@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 // create an array to store orders
-const orders = [];
+const appointments = [];
 
 // Define the port number where our server will listen
 const PORT = 3005;
@@ -24,12 +24,16 @@ app.get("/", (req, res) => {
   res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
-app.post("/submit-order", (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/admin.html`);
-  console.log("Server is running at http://localhost:${PORT}");
+app.post("/submit-button", (req, res) => {
+  const appointment = {
+    fname: req.body.fname,
+    lname: req.body.lname,
+    date: req.body.date,
+    time: req.body.time,
+  };
 
-  orderes.push(order);
-  console.log(orders);
+  appointments.push(appointment);
+  console.log(req.body);
 });
 
 // Start the server and make it listen on the port
