@@ -14,26 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 const orders = [];
 
 // Define the port number where our server will listen
-const PORT = 3001;
+const PORT = 3005;
 
 // Define a default "route" ('/')
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
 app.get("/", (req, res) => {
   // Send a response to the client
-  res.sendFile("hello, world!");
-});
-
-app.get("/contact", (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/contact.html`);
-});
-
-app.get("/confirm", (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
-});
-
-app.get("/admin", (req, res) => {
-  res.send(orders);
+  res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
 app.post("/submit-order", (req, res) => {

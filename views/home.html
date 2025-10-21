@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/formValidation.js" defer></script>
+    <title>Appointment Scheduler</title>
+  </head>
+  <body>
+    <main>
+      <h1>Appointment Scheduler</h1>
+      <form id="calendar-form" action="">
+        <legend>Personal Information</legend>
+        <fieldset>
+          <label for="fname">First Name:</label>
+          <span id="err-fname" class="error">Please input a first name.</span>
+          <input type="text" id="fname" />
+
+          <label for="lname">Last Name:</label>
+          <span id="err-lname" class="error">Please input a last name.</span>
+          <input type="text" id="lname" />
+
+          <label for="date">Date:</label>
+          <span id="err-date" class="error">Please input a date</span>
+          <input type="date" id="date" />
+
+          <label for="time">Time:</label>
+          <span id="err-time" class="error">Please input a time.</span>
+          <input type="time" id="time" />
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
