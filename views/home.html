@@ -10,26 +10,25 @@
   <body>
     <main>
       <h1>Appointment Scheduler</h1>
-      <form id="calendar-form" action="/submit-button" method="POST">
+      <form id="calendar-form" action="submit-button" method="post">
         <legend>Personal Information</legend>
         <fieldset>
           <label for="fname">First Name:</label>
           <span id="err-fname" class="error">Please input a first name.</span>
-          <input type="text" id="fname" />
+          <input type="text" id="fname" name="fname" />
 
           <label for="lname">Last Name:</label>
           <span id="err-lname" class="error">Please input a last name.</span>
-          <input type="text" id="lname" />
+          <input type="text" id="lname" name="lname" />
 
           <label for="date">Date:</label>
           <span id="err-date" class="error">Please input a date</span>
-          <input type="date" id="date" />
+          <input type="date" id="myDate" name="myDate" />
 
           <label for="time">Time:</label>
           <span id="err-time" class="error">Please input a time.</span>
-          <input type="time" id="time" />
-
-          <button type="submit" id="submit-button">Submit</button>
+          <input type="time" id="myTime" name="myTime" />
+          <button type="submit">Submit</button>
         </fieldset>
       </form>
     </main>

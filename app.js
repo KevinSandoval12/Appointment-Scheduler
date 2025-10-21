@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // create an array to store orders
 const appointments = [];
-
+const date = new Date();
 // Define the port number where our server will listen
 const PORT = 3005;
 
@@ -24,16 +24,21 @@ app.get("/", (req, res) => {
   res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
+app.get("/confirmation", (req, res) => {
+  res.send(appointments);
+});
+
 app.post("/submit-button", (req, res) => {
   const appointment = {
     fname: req.body.fname,
     lname: req.body.lname,
-    date: req.body.date,
-    time: req.body.time,
+    scheduledDate: req.body.myDate,
+    scheduledTime: req.body.myTime,
+    timeSubmitted: date.toLocaleTimeString(),
   };
-
+  console.log(appointment);
   appointments.push(appointment);
-  console.log(req.body);
+  res.json(appointments);
 });
 
 // Start the server and make it listen on the port
