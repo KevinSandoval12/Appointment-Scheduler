@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
-app.get("/confirmation", (req, res) => {
+app.get("/admin", (req, res) => {
   res.send(appointments);
 });
 
@@ -38,7 +38,7 @@ app.post("/submit-button", (req, res) => {
   };
   console.log(appointment);
   appointments.push(appointment);
-  res.json(appointments);
+  res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 
 // Start the server and make it listen on the port
