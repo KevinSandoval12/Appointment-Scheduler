@@ -5,8 +5,8 @@ document.getElementById("calendar-form").onsubmit = () => {
   let isValid = true;
   let fname = document.getElementById("fname").value.trim();
   let lname = document.getElementById("lname").value.trim();
-  let date = document.getElementById("date").value.trim();
-  let time = document.getElementById("time").value.trim();
+  let date = document.getElementById("myDate").value.trim();
+  let time = document.getElementById("myTime").value.trim();
 
   //   this checks to see if any inputs are missing
   if (!fname) {
