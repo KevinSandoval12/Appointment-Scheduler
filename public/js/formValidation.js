@@ -28,6 +28,7 @@ document.getElementById("calendar-form").onsubmit = () => {
     isValid = false;
     document.getElementById("err-time").style.display = "block";
   }
+
   return isValid;
 };
 
