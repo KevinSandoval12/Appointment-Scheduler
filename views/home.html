@@ -13,21 +13,21 @@
       <form id="calendar-form" action="/submit-button" method="post">
         <legend>Personal Information</legend>
         <fieldset>
-          <label for="fname">First Name:</label>
+          <label for="fname">First Name:<input type="text" id="fname" name="fname" /></label>
           <span id="err-fname" class="error">Please input a first name.</span>
-          <input type="text" id="fname" name="fname" />
+          
 
-          <label for="lname">Last Name:</label>
+          <label for="lname">Last Name:<input type="text" id="lname" name="lname" /></label>
           <span id="err-lname" class="error">Please input a last name.</span>
-          <input type="text" id="lname" name="lname" />
+          
 
-          <label for="date">Date:</label>
+          <label for="date">Date:<input type="date" id="myDate" name="myDate" /></label>
           <span id="err-date" class="error">Please input a date</span>
-          <input type="date" id="myDate" name="myDate" />
+          
 
-          <label for="time">Time:</label>
+          <label for="time">Time:<input type="time" id="myTime" name="myTime" /></label>
           <span id="err-time" class="error">Please input a time.</span>
-          <input type="time" id="myTime" name="myTime" />
+          
           <button type="submit">Submit</button>
         </fieldset>
       </form>
